@@ -7,7 +7,21 @@
 
 <body>
 
-    <script src="script.js">
+    <script>
+
+        /*Computers choices*/
+        
+        function getComputerChoice() {
+            if (Math.round(Math.random() * 30) <= 9) {
+                alert("Paper");
+            } else if (Math.round(Math.random() * 30) >= 20) {
+                alert("Rock");
+            } else {
+                alert("Scissor");
+            }
+        }
+
+        
 
         /*let player choose rock, paper, or scissor; case sensitive*/
 
