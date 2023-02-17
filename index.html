@@ -53,8 +53,23 @@
         }
 
         /*play the game against computer*/
-
         
+        function playRound(playerSelection, getComputerChoice) {
+            let a = getComputerChoice();
+            let b = playerSelection();
+
+            if (a == "Rock" && b == "Paper") {
+                alert("Win"); 
+            } else if (a == "Scissors" && b == "Rock") {
+                alert("Win"); 
+            } else if (a == "Paper" && b == "Scissors") {
+                alert("Win");
+            } else if (a == b) {
+                alert("Tie")
+            } else {
+                alert("Lose");
+            }
+        }
 
         /*declare win or loss after every round for the user*/
 
