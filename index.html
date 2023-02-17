@@ -25,12 +25,11 @@
 
         /*let player choose rock, paper, or scissor; case sensitive*/
 
-        /* make first letter uppercase and all the rest lowercase */
-        
-        function fixLetters(x) {
+        function fixLetters() {
+            let x = prompt("Choice")
             remainderLetters = x.substring(1);
             let lower = remainderLetters.toLowerCase();
-            
+
 
             firstLetter = x.substr(0, 1);
             let upper = firstLetter.toUpperCase();
