@@ -27,14 +27,29 @@
 
         function fixLetters() {
             let x = prompt("Choice")
+
             remainderLetters = x.substring(1);
             let lower = remainderLetters.toLowerCase();
-
 
             firstLetter = x.substr(0, 1);
             let upper = firstLetter.toUpperCase();
 
-            console.log(upper.concat(lower));
+            return upper.concat(lower);
+        }
+
+        /* second half*/ 
+
+        function playerSelection() {
+            let answer = fixLetters();
+            if (answer == "Rock") {
+                alert("Rock");
+            } else if (answer == "Paper") {
+                alert("Paper");
+            } else if (answer == "Scissors") {
+                alert("Scissors");
+            } else {
+                alert("Not a Choice. Try again.");
+            }
         }
 
         /*play the game against computer*/
