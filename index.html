@@ -25,6 +25,19 @@
 
         /*let player choose rock, paper, or scissor; case sensitive*/
 
+        /* make first letter uppercase and all the rest lowercase */
+        
+        function fixLetters(x) {
+            remainderLetters = x.substring(1);
+            let lower = remainderLetters.toLowerCase();
+            
+
+            firstLetter = x.substr(0, 1);
+            let upper = firstLetter.toUpperCase();
+
+            console.log(upper.concat(lower));
+        }
+
         /*play the game against computer*/
 
         /*declare win or loss after every round for the user*/
