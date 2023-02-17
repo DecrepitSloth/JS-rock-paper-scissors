@@ -21,8 +21,6 @@
             }
         }
 
-        
-
         /*let player choose rock, paper, or scissor; case sensitive*/
 
         function fixLetters() {
@@ -59,15 +57,15 @@
             let b = playerSelection();
 
             if (a == "Rock" && b == "Paper") {
-                alert("Win"); 
+                return("Win"); 
             } else if (a == "Scissors" && b == "Rock") {
-                alert("Win"); 
+                return("Win"); 
             } else if (a == "Paper" && b == "Scissors") {
-                alert("Win");
+                return("Win");
             } else if (a == b) {
-                alert("Tie")
+                return("Tie")
             } else {
-                alert("Lose");
+                return("Lose");
             }
         }
 
