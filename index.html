@@ -13,11 +13,11 @@
         
         function getComputerChoice() {
             if (Math.round(Math.random() * 30) <= 9) {
-                alert("Paper");
+                return("Paper");
             } else if (Math.round(Math.random() * 30) >= 20) {
-                alert("Rock");
+                return("Rock");
             } else {
-                alert("Scissors");
+                return("Scissors");
             }
         }
 
@@ -42,17 +42,19 @@
         function playerSelection() {
             let answer = fixLetters();
             if (answer == "Rock") {
-                alert("Rock");
+                return("Rock");
             } else if (answer == "Paper") {
-                alert("Paper");
+                return("Paper");
             } else if (answer == "Scissors") {
-                alert("Scissors");
+                return("Scissors");
             } else {
-                alert("Not a Choice. Try again.");
+                return("Sorry, Try Again");
             }
         }
 
         /*play the game against computer*/
+
+        
 
         /*declare win or loss after every round for the user*/
 
