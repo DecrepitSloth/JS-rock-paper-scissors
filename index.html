@@ -35,7 +35,7 @@
             return upper.concat(lower);
         }
 
-        /* second half */ 
+        /* second half of player choice */ 
 
         function playerSelection() {
             let answer = fixLetters();
@@ -46,7 +46,8 @@
             } else if (answer == "Scissors") {
                 return("Scissors");
             } else {
-                return("Sorry, Try Again");
+                alert("Sorry, Try Again");
+                playerSelection();
             }
         }
 
