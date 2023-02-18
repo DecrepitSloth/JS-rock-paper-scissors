@@ -69,7 +69,21 @@
             }
         }
 
+
         /*play for the best 3 out of 5 */
+
+        function game() {
+            for (let i = 0; i < 5; i++) {
+                let a = playRound(playerSelection, getComputerChoice);
+                if (a == "Win") {
+                    console.log(i, "Win")
+                } else if (a == "Lose") {
+                    console.log(i, "Lose")
+                } else {
+                    console.log(i, "Tie")
+                }
+            }
+        }
 
         /*declare the winner with a popup when there have been 3 wins*/
 
