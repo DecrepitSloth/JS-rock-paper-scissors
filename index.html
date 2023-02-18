@@ -72,15 +72,45 @@
 
         /*play for the best 3 out of 5 */
 
+        let wins = 0;
+        let losses = 0;
+        let draws = 0;
+
+
         function game() {
             for (let i = 0; i < 5; i++) {
                 let a = playRound(playerSelection, getComputerChoice);
                 if (a == "Win") {
-                    console.log(i, "Win")
+                    ++wins;
+                    console.log(i, "Win");
                 } else if (a == "Lose") {
-                    console.log(i, "Lose")
+                    ++losses;
+                    console.log(i, "Lose");
                 } else {
-                    console.log(i, "Tie")
+                    ++draws;
+                    console.log(i, "Tie");
+                }
+
+                /* score tally */
+
+                if (wins == 3) {
+                    alert("You Win!");
+                    resest();
+                    break;
+                } else if (losses == 3) {
+                    alert("You Lose!");
+                    reset();
+                    break;
+                } else if (draws == 3 || i == 4) {
+                    alert("Draw");
+                    reset();
+                    break;
+                }
+
+                function reset() {
+                    wins = 0;
+                    losses = 0;
+                    draws = 0;
                 }
             }
         }
