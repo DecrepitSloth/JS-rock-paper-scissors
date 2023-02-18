@@ -9,7 +9,7 @@
 
     <script>
 
-        /*Computers choices*/
+        /* Computers choices */
         
         function getComputerChoice() {
             if (Math.round(Math.random() * 30) <= 9) {
@@ -21,7 +21,7 @@
             }
         }
 
-        /*let player choose rock, paper, or scissor; case sensitive*/
+        /* let player type rock, paper, or scissors; case sensitive */
 
         function fixLetters() {
             let x = prompt("Choice")
@@ -35,7 +35,7 @@
             return upper.concat(lower);
         }
 
-        /* second half*/ 
+        /* second half */ 
 
         function playerSelection() {
             let answer = fixLetters();
@@ -50,7 +50,7 @@
             }
         }
 
-        /*play the game against computer*/
+        /* play a round against computer */
         
         function playRound(playerSelection, getComputerChoice) {
             let a = getComputerChoice();
@@ -70,7 +70,7 @@
         }
 
 
-        /*play for the best 3 out of 5 */
+        /* play for the best 3 out of 5 */
 
         let wins = 0;
         let losses = 0;
@@ -114,8 +114,6 @@
                 }
             }
         }
-
-        /*declare the winner with a popup when there have been 3 wins*/
 
     </script>
 
