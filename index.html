@@ -13,6 +13,19 @@
     <button class="Paper" onclick="playRound('Paper', getComputerChoice)">Paper</button>
     <button class="Scissors" onclick="playRound('Scissors', getComputerChoice)">Scissor</button>
     
+    <div class="scoreboard">
+        <h3>Wins:
+            <div class="wins"></div>
+        </h3>
+
+        <h3>Losses:
+            <div class="losses"></div>
+        </h3>
+
+        <h3>Draws:
+            <div class="draws"></div>
+        </h3>
+    </div>
 
     <script>
 
@@ -28,6 +41,16 @@
             }
         };
         
+        /* play for the best 3 out of 5 */
+
+        let wins = 0;
+        let losses = 0;
+        let draws = 0;
+
+        document.querySelector('.wins').innerHTML = wins;
+        document.querySelector('.losses').innerHTML = losses;
+        document.querySelector('.draws').innerHTML = draws;
+
         /* play a round against computer */
         
         function playRound(x, getComputerChoice) {
@@ -35,24 +58,18 @@
             let b = x;
 
             if (a == "Rock" && b == "Paper") {
-                alert("Win"); 
+                document.querySelector('.wins').innerHTML = ++wins;
             } else if (a == "Scissors" && b == "Rock") {
-                alert("Win"); 
+                document.querySelector('.wins').innerHTML = ++wins;
             } else if (a == "Paper" && b == "Scissors") {
-                alert("Win");
+                document.querySelector('.wins').innerHTML = ++wins;
             } else if (a == b) {
-                alert("Tie")
+                document.querySelector('.draws').innerHTML = ++draws;
             } else {
-                alert("Lose");
+                document.querySelector('.losses').innerHTML = ++losses;
             }
-        };
+            };
 
-
-        /* play for the best 3 out of 5 */
-
-        let wins = 0;
-        let losses = 0;
-        let draws = 0;
 
         /*
         function game() {
