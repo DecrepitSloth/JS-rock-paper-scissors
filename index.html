@@ -43,19 +43,18 @@
         } */
         
 
-        
         /* second half of player choice */ 
 
         function playerSelection(x) {
-            if (x == 'rock') {
-            console.log('rock');
-            } else if (x == 'paper') {
-            console.log('paper');
-            } else if (x == 'scissor') {
-            console.log('scissor');
+            if (x == 'Rock') {
+            console.log('Rock');
+            } else if (x == 'Paper') {
+            console.log('Paper');
+            } else if (x == 'Scissor') {
+            return 'Scissor';
         } else {
                 alert("Sorry, Try Again");
-                playerSelection();
+                playerSelection(x);
             }
         };
 
