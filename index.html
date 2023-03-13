@@ -8,11 +8,11 @@
 <body>
 
 
-    <!--
-    <button class="rock">Rock</button>
-    <button class="paper">Paper</button>
-    <button class="scissor">Scissor</button>
-    -->
+    <!-- Add buttons for each  -->
+    <button class ="rock" onclick="playerSelection('rock')">Rock</button>
+    <button class="paper" onclick="playerSelection('paper')">Paper</button>
+    <button class="scissor" onclick="playerSelection('scissor')">Scissor</button>
+    
 
     <script>
 
@@ -29,7 +29,7 @@
         }
 
         /* let player type rock, paper, or scissors; case sensitive */
-
+        /*
         function fixLetters() {
             let x = prompt("Choice")
 
@@ -40,23 +40,24 @@
             let upper = firstLetter.toUpperCase();
 
             return upper.concat(lower);
-        }
+        } */
+        
 
+        
         /* second half of player choice */ 
 
-        function playerSelection() {
-            let answer = fixLetters();
-            if (answer == "Rock") {
-                return("Rock");
-            } else if (answer == "Paper") {
-                return("Paper");
-            } else if (answer == "Scissors") {
-                return("Scissors");
-            } else {
+        function playerSelection(x) {
+            if (x == 'rock') {
+            console.log('rock');
+            } else if (x == 'paper') {
+            console.log('paper');
+            } else if (x == 'scissor') {
+            console.log('scissor');
+        } else {
                 alert("Sorry, Try Again");
                 playerSelection();
             }
-        }
+        };
 
         /* play a round against computer */
         
