@@ -9,9 +9,9 @@
 
 
     <!-- Add buttons for each  -->
-    <button class ="Rock" onclick="playerSelection('Rock')">Rock</button>
-    <button class="Paper" onclick="playerSelection('Paper')">Paper</button>
-    <button class="Scissors" onclick="playerSelection('Scissors')">Scissor</button>
+    <button class ="Rock" onclick="playRound('Rock', getComputerChoice)">Rock</button>
+    <button class="Paper" onclick="playRound('Paper', getComputerChoice)">Paper</button>
+    <button class="Scissors" onclick="playRound('Scissors', getComputerChoice)">Scissor</button>
     
 
     <script>
@@ -26,38 +26,26 @@
             } else {
                 return("Scissors");
             }
-        }
+        };
         
-
-        /* second half of player choice */ 
-
-        function playerSelection(x) {
-            if (x == 'Rock') {
-            console.log('Rock');
-            } else if (x == 'Paper') {
-            console.log('Paper');
-            } else if (x == 'Scissors') {
-            console.log('Scissors');
-        }};
-
         /* play a round against computer */
         
-        function playRound(playerSelection, getComputerChoice) {
+        function playRound(x, getComputerChoice) {
             let a = getComputerChoice();
-            let b = playerSelection();
+            let b = x;
 
             if (a == "Rock" && b == "Paper") {
-                return("Win"); 
+                alert("Win"); 
             } else if (a == "Scissors" && b == "Rock") {
-                return("Win"); 
+                alert("Win"); 
             } else if (a == "Paper" && b == "Scissors") {
-                return("Win");
+                alert("Win");
             } else if (a == b) {
-                return("Tie")
+                alert("Tie")
             } else {
-                return("Lose");
+                alert("Lose");
             }
-        }
+        };
 
 
         /* play for the best 3 out of 5 */
