@@ -7,6 +7,13 @@
 
 <body>
 
+
+    <!-- Add buttons for each  -->
+    <button class ="Rock" onclick="playerSelection('rock')">Rock</button>
+    <button class="Paper" onclick="playerSelection('paper')">Paper</button>
+    <button class="Scissor" onclick="playerSelection('scissor')">Scissor</button>
+    
+
     <script>
 
         /* Computers choices */
@@ -20,36 +27,22 @@
                 return("Scissors");
             }
         }
-
-        /* let player type rock, paper, or scissors; case sensitive */
-
-        function fixLetters() {
-            let x = prompt("Choice")
-
-            remainderLetters = x.substring(1);
-            let lower = remainderLetters.toLowerCase();
-
-            firstLetter = x.substr(0, 1);
-            let upper = firstLetter.toUpperCase();
-
-            return upper.concat(lower);
-        }
+        
 
         /* second half of player choice */ 
 
-        function playerSelection() {
-            let answer = fixLetters();
-            if (answer == "Rock") {
-                return("Rock");
-            } else if (answer == "Paper") {
-                return("Paper");
-            } else if (answer == "Scissors") {
-                return("Scissors");
-            } else {
+        function playerSelection(x) {
+            if (x == 'Rock') {
+            console.log('Rock');
+            } else if (x == 'Paper') {
+            console.log('Paper');
+            } else if (x == 'Scissor') {
+            return 'Scissor';
+        } else {
                 alert("Sorry, Try Again");
-                playerSelection();
+                playerSelection(x);
             }
-        }
+        };
 
         /* play a round against computer */
         
@@ -77,7 +70,7 @@
         let losses = 0;
         let draws = 0;
 
-
+        /*
         function game() {
             for (let i = 0; i < 5; i++) {
                 let a = playRound(playerSelection, getComputerChoice);
@@ -93,7 +86,7 @@
                 }
 
                 /* score tally */
-
+                /*
                 if (wins == 3) {
                     alert("You Win!");
                     reset();
@@ -115,6 +108,9 @@
                 }
             }
         }
+        */
+
+        
 
     </script>
 
