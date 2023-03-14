@@ -7,11 +7,10 @@
 
 <body>
 
-
     <!-- Add buttons for each  -->
-    <button class ="Rock" onclick="playRound('Rock', getComputerChoice)">Rock</button>
-    <button class="Paper" onclick="playRound('Paper', getComputerChoice)">Paper</button>
-    <button class="Scissors" onclick="playRound('Scissors', getComputerChoice)">Scissor</button>
+    <button class ="Rock" onclick="game('Rock')">Rock</button>
+    <button class="Paper" onclick="game('Paper')">Paper</button>
+    <button class="Scissors" onclick="game('Scissors')">Scissor</button>
     
     <div class="scoreboard">
         <h3>Wins:
@@ -40,16 +39,12 @@
                 return("Scissors");
             }
         };
+
+        /* Base values for scoreboard */
         
-        /* play for the best 3 out of 5 */
-
-        let wins = 0;
-        let losses = 0;
-        let draws = 0;
-
-        document.querySelector('.wins').innerHTML = wins;
-        document.querySelector('.losses').innerHTML = losses;
-        document.querySelector('.draws').innerHTML = draws;
+            let wins = 0;
+            let losses = 0;
+            let draws = 0;
 
         /* play a round against computer */
         
@@ -68,7 +63,39 @@
             } else {
                 document.querySelector('.losses').innerHTML = ++losses;
             }
-            };
+        };
+
+        function game(x) {
+            document.querySelector('.wins').innerHTML = wins;
+            document.querySelector('.losses').innerHTML = losses;
+            document.querySelector('.draws').innerHTML = draws;
+            playRound(x, getComputerChoice);
+            
+            function reset(){
+                if ((wins == 4) || (losses == 4) || (draws == 4)) {
+                    (wins = 0) || (document.querySelector('.wins').innerHTML = wins);
+                    (losses = 0) || (document.querySelector('.losses').innerHTML = losses);
+                    (draws = 0) || (document.querySelector('.draws').innerHTML = draws);
+                }
+            }
+
+            if (wins == 3) {
+                alert("You Win!");
+                wins = 4;
+                reset();
+            } else if (losses == 3) {
+                alert("You Lose!");
+                losses = 4;
+                reset();
+            } else if (draws == 3) {
+                alert("Tie");
+                draws = 4;
+                reset();
+            }
+            console.log(wins);
+        };
+
+
 
 
         /*
