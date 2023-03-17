@@ -7,25 +7,27 @@
 </head>
 
 <body>
-
+    <div id="game">
     <!-- Add buttons for each  -->
+        <div class="options">
+            <button class ="Rock" onclick="game('Rock')">Rock</button>
+            <button class="Paper" onclick="game('Paper')">Paper</button>
+            <button class="Scissors" onclick="game('Scissors')">Scissor</button>
+        </div>
 
-    <button class ="Rock" onclick="game('Rock')">Rock</button>
-    <button class="Paper" onclick="game('Paper')">Paper</button>
-    <button class="Scissors" onclick="game('Scissors')">Scissor</button>
-    
-    <div class="scoreboard">
-        <h3>Wins:
-            <div class="wins"></div>
-        </h3>
+        <div class="scoreboard">
+            <h3>Wins:
+                <div class="wins"></div>
+            </h3>
 
-        <h3>Losses:
-            <div class="losses"></div>
-        </h3>
+            <h3>Losses:
+                <div class="losses"></div>
+            </h3>
 
-        <h3>Draws:
-            <div class="draws"></div>
-        </h3>
+            <h3>Draws:
+                <div class="draws"></div>
+            </h3>
+        </div>
     </div>
 
     <script>
