@@ -72,25 +72,27 @@
             playRound(x, getComputerChoice);
             
             function reset(){
-                if ((wins == 4) || (losses == 4) || (draws == 4)) {
+                if ((wins == 3) || (losses == 3) || (draws == 3)) {
                     (wins = 0) || (document.querySelector('.wins').innerHTML = wins);
                     (losses = 0) || (document.querySelector('.losses').innerHTML = losses);
                     (draws = 0) || (document.querySelector('.draws').innerHTML = draws);
                 }
             }
 
+            function endGame() {
+                alert(endText);
+                reset();
+            }
+
             if (wins == 3) {
-                alert("You Win!");
-                wins = 4;
-                reset();
+                endText = "You Win!";
+                setTimeout(endGame, 100);
             } else if (losses == 3) {
-                alert("You Lose!");
-                losses = 4;
-                reset();
+                endText = "You Lose";
+                setTimeout(endGame, 100); 
             } else if (draws == 3) {
-                alert("Tie");
-                draws = 4;
-                reset();
+                endText = "Tie";
+                setTimeout(endGame, 100);
             }
             console.log(wins);
         };
