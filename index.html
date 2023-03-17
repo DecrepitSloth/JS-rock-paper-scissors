@@ -8,6 +8,7 @@
 <body>
 
     <!-- Add buttons for each  -->
+
     <button class ="Rock" onclick="game('Rock')">Rock</button>
     <button class="Paper" onclick="game('Paper')">Paper</button>
     <button class="Scissors" onclick="game('Scissors')">Scissor</button>
@@ -64,6 +65,8 @@
                 document.querySelector('.losses').innerHTML = ++losses;
             }
         };
+        
+        /* play the game up to the best 3 out of 5. End game once the limit is reached */
 
         function game(x) {
             document.querySelector('.wins').innerHTML = wins;
@@ -76,8 +79,7 @@
                     (wins = 0) || (document.querySelector('.wins').innerHTML = wins);
                     (losses = 0) || (document.querySelector('.losses').innerHTML = losses);
                     (draws = 0) || (document.querySelector('.draws').innerHTML = draws);
-                }
-            }
+                }};
 
             function endGame() {
                 alert(endText);
@@ -93,55 +95,7 @@
             } else if (draws == 3) {
                 endText = "Tie";
                 setTimeout(endGame, 100);
-            }
-            console.log(wins);
-        };
-
-
-
-
-        /*
-        function game() {
-            for (let i = 0; i < 5; i++) {
-                let a = playRound(playerSelection, getComputerChoice);
-                if (a == "Win") {
-                    ++wins;
-                    console.log(i, "Win");
-                } else if (a == "Lose") {
-                    ++losses;
-                    console.log(i, "Lose");
-                } else {
-                    ++draws;
-                    console.log(i, "Tie");
-                }
-
-                /* score tally */
-                /*
-                if (wins == 3) {
-                    alert("You Win!");
-                    reset();
-                    break;
-                } else if (losses == 3) {
-                    alert("You Lose!");
-                    reset();
-                    break;
-                } else if (draws == 3 || i == 4) {
-                    alert("Draw");
-                    reset();
-                    break;
-                }
-
-                function reset() {
-                    wins = 0;
-                    losses = 0;
-                    draws = 0;
-                }
-            }
-        }
-        */
-
-        
-
+            }};
     </script>
 
 
